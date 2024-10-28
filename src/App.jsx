@@ -4,22 +4,22 @@ import TodoList from './components/TodoList';
 import InputField from './components/InputField';
 
 function App() {
-  const [todos, setTodos] = useState([]);
+  // const [todos, setTodos] = useState([]);
   const [text, setText] = useState('');
 
-  const addTodo = () => {
-    if(text.trim().length) {
-    setTodos([
-      ...todos,
-      {
-        id: new Date().toISOString(),
-        text,
-        completed: false
-      }
-    ])
-    setText('')
-  }
-  }
+  // const addTodo = () => {
+  //   if(text.trim().length) {
+  //   setTodos([
+  //     ...todos,
+  //     {
+  //       id: new Date().toISOString(),
+  //       text,
+  //       completed: false
+  //     }
+  //   ])
+  //   setText('')
+  // }
+  // }
 
   const toggleTodoComplete = (todoId) => {
     setTodos(
@@ -47,11 +47,7 @@ function App() {
         handleSubmit={addTodo} 
       />
 
-      <TodoList 
-        todos={todos} 
-        toggleTodoComplete={toggleTodoComplete} 
-        removeTodo={removeTodo} 
-      />
+      <TodoList />
     </div>
   );
 }
