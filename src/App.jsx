@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import TodoList from './components/TodoList';
+import InputField from './components/InputField';
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -40,7 +41,11 @@ function App() {
 
   return (
     <div className="App">
-      
+      <InputField 
+        text={text} 
+        handleInput={setText} 
+        handleSubmit={addTodo} 
+      />
 
       <TodoList 
         todos={todos} 
