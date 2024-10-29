@@ -8,8 +8,6 @@ const TodoList = () => {
     <ul>
       {todos.map(todo => <TodoItem 
                           key={todo.id}  
-                          toggleTodoComplete={toggleTodoComplete} 
-                          removeTodo={removeTodo} 
                           {...todo} 
                         />
         )}
